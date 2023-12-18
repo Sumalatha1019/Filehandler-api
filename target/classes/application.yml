@@ -1,0 +1,43 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    password: root
+    url: jdbc:postgresql://localhost:5432/files
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  app:
+      cors:
+        allowed-origins: http://localhost:3000
+
+#server:
+#  port: 8080
+#spring:
+#  devtools:
+#    restart:
+#      enabled: true
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    password: root
+#    url: jdbc:postgresql://localhost:5432/files
+#    username: postgres
+#    properties:
+#      hibernate:
+#        jdbc:
+#          lob:
+#            non_contextual_creation: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#  app:
+#    cors:
+#      allowed-origins: http://localhost:3000
